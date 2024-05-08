@@ -11,6 +11,6 @@ export class MovieService {
 
   GetMovieData():Observable<any>
   {
-    return this.httpClient.get('https://www.omdbapi.com/?apikey=2ee2ed84&s=%27war%27');
+    return this.httpClient.get('https://www.omdbapi.com/?apikey=2ee2ed84&s=%27murder%27');
   }
 }

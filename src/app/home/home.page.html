@@ -1,34 +1,46 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Movie App
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
+  <ion-menu contentId="main-content" isActive="true">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-button fill="clear" size="auto" [routerLink]="['/home']">Listings</ion-button>
+      <br>
+      <ion-button fill="clear" size="auto" [routerLink]="['/book']">Book</ion-button>
+      <br>
+      <ion-button fill="clear" size="auto" [routerLink]="['/login']">Login</ion-button>
+      <br>
+      <ion-button fill="clear" size="auto" [routerLink]="['/news']">News</ion-button>
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Movie Listings</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding"> <div id="container">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Movie App</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-
-    <ion-card *ngFor="let movie of movies">
-      <img src="{{movie.Poster}}" height="350" width ="250">
-      <ion-card-header>
-        <ion-card-title>{{movie.Title}}</ion-card-title>
-        <ion-card-subtitle>{{movie.Year}}</ion-card-subtitle>
-      </ion-card-header>
-    </ion-card>
-
-   <!--<ul>
-    <li *ngFor="let movie of movies">
-      {{movie.Title}}
-      <p>{{movie.Year}}</p>
-      <img src="{{movie.Poster}}" height="350" width ="300">
-    </li>
-   </ul>-->
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="auto">
+          <ion-card *ngFor="let movie of movies">
+          <img src="{{movie.Poster}}" height="350" width ="250">
+          <ion-card-header>
+            <ion-card-title>{{movie.Title}}</ion-card-title>
+            <ion-card-subtitle>{{movie.Year}}</ion-card-subtitle>
+            <ion-button fill = "clear" [routerLink]="['/login']">Book</ion-button>
+          </ion-card-header>
+        </ion-card>
+       </ion-col>
+      </ion-row>
+     </ion-grid>
+    </div> 
+  </ion-content>
   </div>
-</ion-content>
+</ion-app>
