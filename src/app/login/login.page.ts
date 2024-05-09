@@ -55,12 +55,12 @@ export class LoginPage implements OnInit {
     const isUserExist = this.signupUsers.find(m => m.username == this.loginObj.username && m.password == this.loginObj.password);
     if(isUserExist != undefined)
     {
-      alert('An error occured logging in')
+      alert('User Logged in Successfully');
+      this.bookPage();    
     }
     else
     {
-      alert('User Logged in Successfully');
-      this.bookPage();
+      alert('Error logging in');
     }
   }
 
