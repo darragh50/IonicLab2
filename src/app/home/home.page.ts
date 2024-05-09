@@ -5,6 +5,7 @@ import { MovieService } from '../Services/movie.service';
 import { CommonModule } from '@angular/common';
 import { RouterLinkWithHref } from '@angular/router';
 import { Routes } from '@angular/router';
+import { Share } from '@capacitor/share';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -32,6 +33,15 @@ export class HomePage implements OnInit{
   bookPage()
   {
     this.router.navigate(['/login'])
+  }
+
+  async shareMovie(movie:any)
+  {
+    await Share.share({
+      title: movie.Title,
+      text: movie.Year,
+      url: movie.Poster,
+    });
   }
 
 }

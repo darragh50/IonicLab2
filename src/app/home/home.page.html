@@ -34,6 +34,7 @@
           <ion-card-header>
             <ion-card-title>{{movie.Title}}</ion-card-title>
             <ion-card-subtitle>{{movie.Year}}</ion-card-subtitle>
+            <ion-button fill = "clear" (click)="shareMovie(movie)">Share</ion-button>
             <ion-button fill = "clear" [routerLink]="['/login']">Book</ion-button>
           </ion-card-header>
         </ion-card>
