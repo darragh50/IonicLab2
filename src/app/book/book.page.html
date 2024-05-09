@@ -6,17 +6,138 @@
       </ion-toolbar>
     </ion-header>
   </ion-menu>
+
   <div class="ion-page" id="main-content">
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar class="new-background-color">
         <ion-buttons slot="start">
           <ion-back-button defaultHref="/login"></ion-back-button>
         </ion-buttons>
         <ion-title>Booking</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding"> <div id="container">
+
+    <ion-content class="ion-padding"> 
+      <div id="container">
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="auto">
+            <div class="card">
+              <div class="card-header">
+              <h3>Tickets</h3>
+              </div>
+              <table style="display: table;">
+              <tbody>
+              <tr>
+              <th>Ticket Name</th>
+              <th>Price</th>
+              <br>
+              <br>
+              <th>Quantity</th>
+              </tr>
+              <br>
+              <br>
+              <tr>
+              <td style="vertical-align:middle;">Adult</td><td style="vertical-align:middle;">€10.00</td> 
+              <td>
+                <select class="seatSelect">
+                <option selected="selected" value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</select>                  <br>
+              </td>
+              </tr>
+              <br>
+              <br>
+              <tr>
+              <td style="vertical-align:middle;">Student</td><td style="vertical-align:middle;">€9.00</td> 
+              <td>
+              <select class="seatSelect">
+                <option selected="selected" value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</select>
+                  <br>
+              </td>
+              </tr>
+              <br>
+              <br>
+              <tr>
+              <td style="vertical-align:middle;">Family (4 People)</td><td style="vertical-align:middle;">€30.00</td> 
+              <td>
+              <select class="seatSelect">
+                <option selected="selected" value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</select>
+                  <br>
+              </td>
+              </tr>
+              <br>
+              <br>
+              <tr>
+              <td style="vertical-align:middle;">OAP</td><td style="vertical-align:middle;">€6.50</td> <td class="IMC_selectHolder">
+              <select>
+              <option selected="selected" value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</select>
+              <br>
+              </td>
+              </tr>
+              </tbody>
+              </table>
+              </div>
+
+              <br>
+              <br>
+              <br>
+      
+            <div class="foodOptions">
+              <div class="card-header">
+              <h3>Food Options</h3>
+              </div>
+              <table id="option1" style="display: table;">
+              <tbody>
+              <tr>
+              <th></th>
+              <th>Food</th>
+              <th>Price</th>
+              <th>Qty</th>
+              </tr>
+
+              <br>
+              <br>
+              <br>
+
+              <tr>
+              <td style="vertical-align: middle;"><img src="../../assets/icon/food.png" style="max-width: 80px;"/></td>
+              <td style="vertical-align:middle;">Large Popcorn & Drink<details><summary><small><b>Details</b></small></summary><br><small class="text-primary">1 Large Popcorn & A drink of your choice</small></details></td><td style="vertical-align:middle;">€10.00</td> 
+              <td>
+              <select>
+                <option selected="selected" value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</select>
+              <br>
+              </td>
+              </tr>
+
+              <br>
+              <br>
+              <br>
+
+              <tr>
+              <td style="vertical-align: middle;"><img src="../../assets/icon/food2.png" style="max-width: 80px;"/></td>
+              <td style="vertical-align:middle;">Large Popcorn<details><summary><small><b>Details</b></small></summary><br><small class="text-primary">1 Large Pocorn</small></details></td><td style="vertical-align:middle;">€9.00</td> 
+              <td>
+              <select>
+              <option selected="selected" value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</select>
+              <br>
+              </td>
+              </tr>
+              <tr>
+              <td style="vertical-align: middle;"><img src="../../assets/icon/pickandmix.png" style="max-width: 80px;"/></td>
+              <td style="vertical-align:middle;">Pick & Mix<details><summary><small><b>Details</b></small></summary><br><small class="text-primary">1 Pick&Mix with a variery of Jellies</small></details></td><td style="vertical-align:middle;">€5.50</td> <td class="IMC_selectHolder">
+              <select>
+                <option selected="selected" value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</select>
+              <br>
+              </td>
+              </tr>
+              </tbody>
+              </table>
+              <h2>Select Seating. Click below.</h2>
+              </div>
+               <ion-button style="max-width: 400px" [routerLink]="['/seating']">Seating</ion-button>
+       </ion-col>
+      </ion-row>
+     </ion-grid>
     </div> 
-  </ion-content>
+    </ion-content>
   </div>
 </ion-app>

@@ -15,11 +15,11 @@ export const routes: Routes = [
     loadComponent: () => import('./book/book.page').then( m => m.BookPage)
   },
   {
-    path: 'news',
-    loadComponent: () => import('./news/news.page').then( m => m.NewsPage)
-  },
-  {
     path: 'login',
     loadComponent: () => import('./login/login.page').then( m => m.LoginPage)
+  },
+  {
+    path: 'seating',
+    loadComponent: () => import('./seating/seating.page').then( m => m.SeatingPage)
   },
 ];

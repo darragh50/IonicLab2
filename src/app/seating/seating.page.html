@@ -1,0 +1,71 @@
+<ion-app>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Seating</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  </ion-menu>
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar class="new-background-color">
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="/login"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Seating</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="ion-padding"> 
+      <div id="container">
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="auto">
+            <div class="card">
+              <div class="card-header">
+              </div>
+              <table style="display: table;">
+                <img src="../../assets/icon/seating.png" style="max-width: 330px;"/>
+
+              <tbody>
+              <tr>
+                <td>
+                  <ion-list>
+                    <ion-item>
+                      <ion-select justify="space-between" label="Select Seat" placeholder="Seat" 
+                        aria-label="Seating"
+                        placeholder="Select Seat"
+                        (ionChange)="handleChange($event)"
+                        (ionCancel)="handleCancel()"
+                        (ionDismiss)="handleDismiss()"
+                      >
+                        <ion-select-option value="seat1">A7</ion-select-option>
+                        <ion-select-option value="seat2">A8</ion-select-option>
+                        <ion-select-option value="seat3">A9</ion-select-option>
+                        <ion-select-option value="seat1">A7</ion-select-option>
+                        <ion-select-option value="seat2">A8</ion-select-option>
+                        <ion-select-option value="seat3">A9</ion-select-option>
+                        <ion-select-option value="seat1">A7</ion-select-option>
+                        <ion-select-option value="seat2">A8</ion-select-option>
+                        <ion-select-option value="seat3">A9</ion-select-option>
+                        <ion-select-option value="seat1">A7</ion-select-option>
+                        <ion-select-option value="seat2">A8</ion-select-option>
+                        <ion-select-option value="seat3">A9</ion-select-option>
+                      </ion-select>
+                    </ion-item>
+                  </ion-list>              
+                </td>
+              </tr>
+             </tbody>
+            </table>
+           </div>
+          </ion-col>
+         </ion-row>
+       </ion-grid>
+     </div>
+   </ion-content>
+  </div>
+ </ion-app>
+              
+              

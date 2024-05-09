@@ -12,7 +12,7 @@ body{
 .main{
 	width: 350px;
 	height: 500px;
-	background: red;
+	background: blue;
 	overflow: hidden;
 	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
 	border-radius: 10px;
@@ -27,7 +27,7 @@ body{
 	height: 100%;
 }
 label{
-	color: #ff0000;
+	color:  #4d45d7;
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
@@ -55,7 +55,7 @@ button{
 	justify-content: center;
 	display: block;
 	color: #fff;
-	background:#ff0000;
+	background: #4d45d7;
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 20px;
@@ -76,7 +76,7 @@ button:hover{
 	transition: .8s ease-in-out;
 }
 .login label{
-	color: #ff0000;
+	color:  #4d45d7;
 	transform: scale(.6);
 }
 
@@ -88,5 +88,13 @@ button:hover{
 }
 #chk:checked ~ .signup label{
 	transform: scale(.6);
+}
+
+.new-background-color{
+    --background: #4d45d7;
+  }
+
+.backround{
+	background: #000000 !important;
 }
 
