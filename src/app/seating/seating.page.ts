@@ -19,6 +19,7 @@ export class SeatingPage implements OnInit {
   ngOnInit() {
   }
 
+  //Functions from the docs for ion-select
   handleChange(e:any) {
     console.log('ionChange fired with value: ' + e.detail.value);
   }

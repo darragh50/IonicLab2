@@ -30,11 +30,13 @@ export class HomePage implements OnInit{
     );
   }
 
+  //Traversal
   bookPage()
   {
     this.router.navigate(['/login'])
   }
 
+  //Function for share plugin
   async shareMovie(movie:any)
   {
     await Share.share({

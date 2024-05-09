@@ -15,6 +15,7 @@ import { RouterLinkWithHref } from '@angular/router';
 export class BookPage implements OnInit {
 
   getValue:any=[];
+  //Try to store values for a shopping cart but could no
   largPop:number = 0;
 
   constructor(private router:Router) 

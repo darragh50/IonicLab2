@@ -13,9 +13,11 @@ import { ActivatedRoute, Router } from '@angular/router';
   imports: [IonHeader, IonToolbar, IonTitle, IonContent, CommonModule, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonGrid, IonRow, IonCol, IonButton, IonApp, IonMenu, IonButtons, IonMenuButton, RouterLinkWithHref, IonBackButton, FormsModule],
 })
 export class LoginPage implements OnInit {
+  //Variables for signup
   signupUsers: any[] = [];
   signupObj: any = 
   {
+    //Kepp values blank to initialise
     username: '', email: '', password: ''
   };
   loginObj: any = 
@@ -27,13 +29,16 @@ export class LoginPage implements OnInit {
 
   ngOnInit() 
   {
+    //Assign data to localstorage in browser
     const localData = localStorage.getItem('signUpUsers');
+    //If not null parse through local data to find previsouly enetered info
     if(localData != null)
     {
       this.signupUsers = JSON.parse(localData);
     }
   }
 
+  //Same as before
   onSignUp()
   {
     this.signupUsers.push(this.signupObj);
@@ -46,6 +51,7 @@ export class LoginPage implements OnInit {
 
   onLogin()
   {
+    //Lambda expression to compare  entered values to savd storage
     const isUserExist = this.signupUsers.find(m => m.username == this.loginObj.username && m.password == this.loginObj.password);
     if(isUserExist != undefined)
     {
@@ -58,6 +64,7 @@ export class LoginPage implements OnInit {
     }
   }
 
+  //Traversal
   bookPage()
   {
     this.router.navigate(['/book'])
